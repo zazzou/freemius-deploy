@@ -12,7 +12,7 @@
     require_once '/freemius-php-api/freemius/FreemiusBase.php';
     require_once '/freemius-php-api/freemius/Freemius.php';
 	define( 'FS__API_SCOPE', 'developer' );
-	define( 'FS__API_DEV_ID', $_ENV['DEV_ID'] );
+    define( 'FS__API_DEV_ID', $_ENV['USER_ID'] ?? $_ENV['DEV_ID'] ?? $_ENV['developer_id'] );
 	define( 'FS__API_PUBLIC_KEY', $_ENV['PUBLIC_KEY'] );
 	define( 'FS__API_SECRET_KEY', $_ENV['SECRET_KEY'] );
 
